@@ -1,10 +1,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href='http://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script|Playball|Lobster+Two|Courgette|Nothing+You+Could+Do|Fredericka+the+Great|Megrim|Metamorphous|Italianno|Tulpen+One|Bilbo|Astloch|Spirax|Galdeano' rel='stylesheet' type='text/css'>
 
-<section class="main_color">
+<div class="main_color">
   <header id="home_page_background">
   </header>
-<% if user_signed_in? %>
+
+  <h1>Andelin's classic pecan rolls combine hand-made caramel, velvety pinoche fudge, and crispy toasted pecans. We guarantee they are the most delicious candy you have ever tasted.</h1>
+
+<p>"I just felt an endorphin rush down my back." - Chris Midgley, SLC
+
+
+ <% if user_signed_in? %>
   <% if current_user.admin? %>
     <h3>Admin</h3>
     <p><%= link_to 'User count:', users_path %> <%= User.count %></p>
@@ -13,14 +19,15 @@
     <%= link_to 'Download PDF', products_path('product.pdf'), :class => 'btn btn-success btn-large' %>
   <% end %>
 <% else %>
-  <h3>Purchase the book.</h3>
+  <h3 id="pecan_roll_image">Order now!</h3>
   <article>
-    <label class="amount">
-      <%= image_tag 'rubyonrails.png', size: '60x60' %>
+    <label class="amount" id="pecan_roll_image">
+      <%= image_tag 'pecan_roll_edit.jpg', size: '200x200' %>
       <div><%= Rails.application.secrets.product_title %></div>
       <span><%= number_to_currency(Rails.application.secrets.product_price.to_f/100) %></span>
     </label>
     <%= render :partial => 'purchase' %>
   </article>
 <% end %>
-</section>
+
+</div>
