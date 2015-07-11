@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     post 'pay', to: 'registrations#pay'
   end
   resources :users
+	resources :products
   root :to => 'visitors#index'
 end
