@@ -78,3 +78,4 @@ pickle-email-*.html
 
 # Secret keys
 /config/secrets.yml
+/config/database.yml
