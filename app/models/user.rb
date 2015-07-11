@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?
   before_create :pay_with_card, unless: Proc.new { |user| user.admin? }
-  after_create :sign_up_for_mailing_list
+  # after_create :sign_up_for_mailing_list
 
   attr_accessor :stripeToken
 

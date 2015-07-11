@@ -6,6 +6,7 @@ class RegistrationsController < Devise::RegistrationsController
     @user.password = params[:user][:password]
     @user.password_confirmation = params[:user][:password_confirmation]
     render :new
+    # binding.pry
   end
 
   def create

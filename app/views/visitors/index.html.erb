@@ -22,7 +22,7 @@
     <label class="amount" id="pecan_roll_image">
       <%= image_tag 'pecan_roll_edit.jpg', size: '200x200' %>
       <div><%= Rails.application.secrets.product_title %></div>
-      <span><%= number_to_currency(Rails.application.secrets.product_price.to_f/100) %></span>
+      <span><%= number_to_currency(ENV['product_price']) %></span>
     </label>
     <%= render :partial => 'purchase' %>
   </article>
