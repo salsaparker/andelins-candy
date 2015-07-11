@@ -1,6 +1,19 @@
+body {
+   font-size: 100%;
+}
+
+@media only screen and (max-width: 400px) {
+   body { font-size:80%;}
+ }
+
+.main_color {
+background-color: #E3C995;
+}
+
 #home_page_background {
 	height: 800px;
-	background-image: image-url('rustic_key.jpg');
+	background-image: image-url('rustic_key_new.jpg');
 	repeat: no-repeat;
 	background-size: 100%;
 }
+
