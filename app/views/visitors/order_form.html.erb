@@ -1,0 +1,53 @@
+<link href='http://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script|Playball|Lobster+Two|Courgette|Nothing+You+Could+Do|Fredericka+the+Great|Megrim|Metamorphous|Italianno|Tulpen+One|Bilbo|Astloch|Spirax|Galdeano' rel='stylesheet' type='text/css'>
+
+<h1>Order the classic Pecan Roll with pinoche fudge filling</h1>
+<p id="pecan_roll_edit.jpg"></p>
+<p id="pecan_roll_edit.png"></p>
+
+<h1>or</h1>
+
+<h1>Create your own delicious combination</h1>
+
+<h3>Select your favorite fudge filling:</h3>
+<select>
+  <option>Milk Chocolate</option>
+  <option>Dark Chocolate</option>
+  <option>White Chocolate</option>
+  <option>Peanut Butter</option>
+  <option>Pinoche</option>
+</select>
+
+<h3>Select a toasted crunch:</h3>
+<select>
+  <option>Pecans</option>
+  <option>Almonds</option>
+  <option>Walnuts</option>
+  <option>Coconut</option>
+  <option>Pretzels</option>
+</select>
+
+<p>Some popular combinations include:</p>
+<ul>
+  <li>White chocolate fudge with coconut</li>
+  <li>Peanut butter fudge with pretzel</li>
+  <li>Dark chocolate fudge with almonds</li>
+</ul>
+
+<p>Price per pound: $34.99 (shipping included).<br/>
+You may order in increments of pounds or .5 pounds, i.e.
+1, 1.5, 2, 2.5, etc.</p>
+
+<%= form_for @product, html: {multipart: true} do |f| %>
+  <%= f.label :amount %>
+  <%= f.number_field :amount, :step => 2)%>
+  <br/>
+  <%= f.label(:price)%> 
+  $<%= f.text_field(:price)%>
+  <br/>
+  <%= f.label(:description)%>
+  <%= f.text_field(:description)%>
+  <br/>
+  <%= f.submit("Submit")%>
+<%end%>
+
+<%= 
