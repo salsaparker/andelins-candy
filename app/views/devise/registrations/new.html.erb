@@ -54,7 +54,7 @@
         data-email="<%= @user.email %>"
         data-key="<%= ENV['stripe_publishable_key'] %>"
         data-description="<%= ENV['product_title'] %>"
-        data-amount="<%= ENV['product_price'] %>">
+        data-amount="<%= 15 * 100 %>">
        </script>
     <% end %>
   </div>
