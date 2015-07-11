@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  mount Upmin::Engine => '/admin'
+
   get 'products/:id', to: 'products#show', :as => :products
   devise_for :users, :controllers => { :registrations => 'registrations' }
   devise_scope :user do
